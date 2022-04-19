@@ -17,9 +17,7 @@ jobs:
 
       - name: Build image
         run: |
-        docker build \
-        --tag memoriaio/java-docker:${JAVA_VERSION} \
-        --tag memoriaio/java-docker:latest .
+          docker build --tag memoriaio/java-docker:${JAVA_VERSION} --tag memoriaio/java-docker:latest .
 
       - name: Log into registry
         run: echo "${{ secrets.docker_password }}" | docker login -u ${{ secrets.docker_username }} --password-stdin
