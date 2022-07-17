@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 env:
-  JAVA_VERSION: 18
+  VERSION: 2022.07.17.01
   
 jobs:
   push:
@@ -17,12 +17,12 @@ jobs:
 
       - name: Build image
         run: |
-          docker build --tag memoriaio/java-docker:${JAVA_VERSION} --tag memoriaio/java-docker:latest .
+          docker build --tag memoriaio/java-docker:${VERSION} --tag memoriaio/java-docker:latest .
 
       - name: Log into registry
         run: echo "${{ secrets.docker_password }}" | docker login -u ${{ secrets.docker_username }} --password-stdin
 
       - name: Push image
         run: |
-          docker push memoriaio/java-docker:${JAVA_VERSION}
+          docker push memoriaio/java-docker:${VERSION}
           docker push memoriaio/java-docker:latest
