@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 env:
-  VERSION: 21.0.0
+  VERSION: 21.0.1
   
 jobs:
   push:
