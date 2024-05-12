@@ -1,4 +1,4 @@
-FROM openjdk:21-slim-bullseye
+FROM openjdk:22-slim-bullseye
 
 MAINTAINER Ismail Marmoush<marmoushismail@gmail.com>
 
