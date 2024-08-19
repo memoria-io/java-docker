@@ -1,4 +1,4 @@
-FROM java-docker
+FROM memoriaio/java-docker
 
 ARG KEYCLOAK_VERSION=25.0.4
 
