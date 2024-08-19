@@ -18,7 +18,7 @@ jobs:
       - name: Build image
         run: |
           docker build --tag memoriaio/java-docker:${VERSION} --tag memoriaio/java-docker:latest .
-          docker build --tag memoriaio/keycloak-docker:${VERSION} --tag memoriaio/keycloak-docker:latest --file keycloak.dockerfile
+          docker build --tag memoriaio/keycloak-docker:${VERSION} --tag memoriaio/keycloak-docker:latest --file keycloak.dockerfile .
 
       - name: Log into registry
         run: echo "${{ secrets.docker_password }}" | docker login -u ${{ secrets.docker_username }} --password-stdin
